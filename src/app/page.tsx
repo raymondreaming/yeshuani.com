@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 right-0 z-50 px-6 py-4">
+      <nav className="absolute top-0 left-0 right-0 z-50 px-4 py-4">
         <div className="flex items-center justify-between backdrop-blur-md bg-white/10 dark:bg-black/20 rounded-xl border border-white/20 dark:border-white/10 shadow-lg px-6 py-3">
           {/* Logo and Brand */}
           <div className="flex items-center space-x-3">
@@ -102,23 +102,6 @@ export default function App() {
         scene="https://prod.spline.design/F6BcbYJkSdRDdQTg/scene.splinecode"
         className="absolute inset-0 w-full h-full"
       />
-
-      {/* Coming Soon Overlay */}
-      <div className="absolute inset-0 flex items-end justify-center pointer-events-none z-80">
-        <div className="mb-8 px-6 py-4 bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-xl border border-white/20 dark:border-white/10 shadow-2xl">
-          <div className="text-center">
-            <h1 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent mb-1 font-sans">
-              yeshuani.com
-            </h1>
-            <p className="text-white/70 dark:text-gray-300 text-sm md:text-base font-light font-sans">
-              Coming Soon
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Subtle gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
     </div>
   );
 }
