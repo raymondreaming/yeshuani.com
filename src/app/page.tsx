@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { HiSearch, HiUser, HiShoppingCart, HiMenu } from "react-icons/hi";
-import RealityRecode from "@/components/RealityRecode";
+
 import SplineWithLoader from "@/components/SplineWithLoader";
 
 export default function App() {
