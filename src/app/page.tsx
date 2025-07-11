@@ -1,14 +1,15 @@
-import Spline from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline/next";
 import Image from "next/image";
+import { HiSearch, HiUser, HiShoppingCart, HiMenu } from "react-icons/hi";
 
 export default function App() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Navbar */}
       <nav className="absolute top-0 left-0 right-0 z-50 px-4 py-4">
-        <div className="flex items-center justify-between backdrop-blur-md bg-white/10 dark:bg-black/20 rounded-xl border border-white/20 dark:border-white/10 shadow-lg px-6 py-3">
+        <div className="flex items-center justify-between backdrop-blur-md bg-white/10 dark:bg-black/20 rounded-xl border border-white/15 dark:border-white/15 shadow-2xl px-2 py-2 lg:px-4 lg:py-2">
           {/* Logo and Brand */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <Image
               src="/yeshuani-logo.png"
               alt="Yeshuani Logo"
@@ -16,7 +17,7 @@ export default function App() {
               height={32}
               className="rounded-full"
             />
-            <span className="text-xl font-bold text-white">Yeshuani</span>
+            <span className="text-lg font-bold text-white">Yeshuani</span>
           </div>
 
           {/* Navigation Links */}
@@ -42,56 +43,29 @@ export default function App() {
           </div>
 
           {/* Right Side Icons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center gap-2">
             {/* Search Button */}
             <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
-              <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
+              <HiSearch className="w-5 h-5 text-white" />
             </button>
 
             {/* Person Icon */}
             <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
-              <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
+              <HiUser className="w-5 h-5 text-white" />
             </button>
 
-            {/* Cart Icon */}
-            <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
-              <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l5.7-5.7m0 0L17 13"
-                />
-              </svg>
+            {/* Cart Icon with Badge */}
+            <button className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors relative">
+              <HiShoppingCart className="w-5 h-5 text-white" />
+              {/* Cart Badge */}
+              <span className="absolute -top-1 -right-1 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                0
+              </span>
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button className="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
+              <HiMenu className="w-5 h-5 text-white" />
             </button>
           </div>
         </div>
@@ -102,6 +76,9 @@ export default function App() {
         scene="https://prod.spline.design/F6BcbYJkSdRDdQTg/scene.splinecode"
         className="absolute inset-0 w-full h-full"
       />
+
+      {/* Subtle gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
     </div>
   );
 }
