@@ -11,6 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "yeshuani.com - Coming Soon",
   description: "Something amazing is on the way",
+  icons: {
+    icon: "/yeshuani-logo.png",
+    shortcut: "/yeshuani-logo.png",
+    apple: "/yeshuani-logo.png",
+  },
 };
 
 export default function RootLayout({
